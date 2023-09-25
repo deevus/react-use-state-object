@@ -1,0 +1,33 @@
+{
+  "name": "react-use-state-object",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/react": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "bun-types": "latest",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "latest",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "latest",
+    "react": "^18.2.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "react": ">16"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production bun run build.ts",
+    "build:types": "bunx --bun tsc",
+    "dev": "bun run build.ts",
+    "dev:watch": "bun --watch run build.ts",
+    "postbuild": "bun run build:types",
+    "lint": "bunx --bun eslint --fix --config .eslintrc.yml"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}
